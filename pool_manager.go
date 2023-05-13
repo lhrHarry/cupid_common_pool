@@ -40,7 +40,7 @@ var (
 	// ErrLackPoolFunc 线程池中 缺少方法
 	ErrLackPoolFunc = errors.New("must provide function for pool")
 
-	// 无效的协程池过期
+	// ErrInvalidPoolExpiry 无效的协程池过期
 	ErrInvalidPoolExpiry = errors.New("invalid pool expire")
 
 	ErrInvalidPreAllocSize = errors.New("invalid pre alloc size")
@@ -50,6 +50,9 @@ var (
 
 	// ErrPoolOverload 池已超载
 	ErrPoolOverload = errors.New("pool has been overload")
+
+	// ErrTimeout 超时
+	ErrTimeout = errors.New("release time out")
 
 	// defaultAntsPool , os.Stderr标准的错误输出， 日志打印样式
 	defaultLogger = Logger(log.New(os.Stderr, "[cupid_pool]:::", log.LstdFlags|log.Lmicroseconds))
